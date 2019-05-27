@@ -7,7 +7,9 @@ those links which can optionally be ran through regex as well as
  If no output file is specified links are only printed to the console.  
 Comes with a simple GUI.
 Script and breaks easily and is not in PIP 8 compliance  
+
 #### Imports/Requirements  
+**Linux**  
 selenium - Webdriver must be downloaded and added separately (see Install)  
 PySimpleGUI - Imported Normally  
 re - Imported Normally  

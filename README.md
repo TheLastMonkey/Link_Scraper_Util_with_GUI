@@ -1,8 +1,8 @@
 # Link Scraper w/ GUI Regex and output file  
 
 #### Description  
-This script will scrape a web page or file for its links and return 
-those links which can optionally be ran through regex as well as the
+This script will scrape a web page or html file for its links and return 
+those links which can optionally be ran through regex as well as 
  output to a file.  
  If no output file is specified links are only printed to the console.  
 Comes with a simple GUI.
@@ -33,7 +33,7 @@ Add Output File if Desired
 Terrible Documentation!!! :D
 
 #### Disclaimer/License  
-You do you.this comes with no license no guarantee and will likely 
+You do you. This comes with no license no guarantee and will likely 
 break and destroy everything in the world. You have been warned. You are
  also here by liable for everything.... just everything. What can I say this 
  is a mess and it's definitely your fault.  
@@ -43,7 +43,7 @@ break and destroy everything in the world. You have been warned. You are
 What is this thing really for?  
 Although this utility has various uses I find that it's highly useful for
  finding either specific links or links off site.   
-For instance if you're on Reddit I need like to get all the imgur or gfycat 
+For instance if you're on Reddit you need like to get all the imgur or gfycat 
 links  
 With some simple regex you can easily accomplish that.  
 

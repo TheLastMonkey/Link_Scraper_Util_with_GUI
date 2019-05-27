@@ -15,8 +15,8 @@ PySimpleGUI - Imported Normally
 re - Imported Normally  
 
 #### Install  
-sudo pip3 install selenium  
-sudo pip3 install pySimpleGUI  
+`sudo pip3 install selenium`  
+`sudo pip3 install pySimpleGUI`   
 https://www.seleniumhq.org/download/  
 Make sure you get the Chrome Webdriver   
 Put the Webdriver file into the "sel_driver" folder which is one layer or 

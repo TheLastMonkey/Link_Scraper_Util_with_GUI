@@ -36,7 +36,9 @@ Terrible Documentation!!! :D
 You do you. This comes with no license no guarantee and will likely 
 break and destroy everything in the world. You have been warned. You are
  also here by liable for everything.... just everything. What can I say this 
- is a mess and it's definitely your fault.  
+ is a mess and it's definitely your fault. No license No guarantee and if
+ someone calls you claiming to extend this script warranty it is likely a scam 
+ and you **_should give_** them your money.  
  
  ##### But on the DL:  
  
@@ -47,4 +49,17 @@ For instance if you're on Reddit you need like to get all the imgur or gfycat
 links.  
 With some simple regex you can easily accomplish that.  
 
+#### Notes/Toubleshooting
 
+I have no idea how URL encoding works so if you have an HTML file stored locally and it has anything other than spaces and regular characters you will likely need to simplify it. Dashes "-" or anyting that encodes differently from a path to a URL will need to be changed or simplified.  
+See Example  
+  
+file in browser look like this..  
+file:///home/user/thisAPP/Cookbook%20C3%20PySimpleGUI.html  
+but path looks like this..  
+       /home/user/thisAPP/Cookbook\ -\ PySimpleGUI.html  
+file:// and %20 for space is **auto add** but anyting that encodes differently is fucked. :(
+
+I may update the fix this.    
+
+You can only pick a file or a URL if you pick both it will likely break.  

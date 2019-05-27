@@ -60,7 +60,7 @@ file in browser look like this..
 file:///home/user/thisAPP/Cookbook%20C3%20PySimpleGUI.html  
 but path looks like this..  
        /home/user/thisAPP/Cookbook\ -\ PySimpleGUI.html  
-file:// and %20 for space is **auto add** but anyting that encodes differently is fucked. :(
+file:// and %20 for space are **auto add** but anyting that encodes differently is fucked. :(
 
 I may update the fix this.    
 

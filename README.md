@@ -44,7 +44,7 @@ What is this thing really for?
 Although this utility has various uses I find that it's highly useful for
  finding either specific links or links off site.   
 For instance if you're on Reddit you need like to get all the imgur or gfycat 
-links  
+links.  
 With some simple regex you can easily accomplish that.  
 
 

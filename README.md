@@ -27,18 +27,26 @@ There are Selenium tutorials you'll be all right.
 
 #### Options/Features  
 Headless Enabled by Default - "Just do the thing."  
-User Data Cookies Logins Etc Disabled by Default  
+User Data Cookies Logins Etc Disabled by Default - see User Data  
 Accept Input as a Local HTML File or a URL  
 Add Regex if Desired
 Add Output File if Desired  
 "Some" Duplicate URL Rejection - Needs Improvement - but that would reduce performance.  
-  
-Add Wait Time - useful for giving you time to scroll to capture non loaded content. 
+Terrible Documentation!!! :D  
+Add Wait Time - useful for giving you time to scroll to capture non loaded content.  
   
 #### Wait Time Bonus!  
 On certain web pages as long as you keep loading and more elements the wait MAY automatically extend.  
 Depending on the website you may be able to load multiple pages or follow links to new pages and continue to collect links.  
-Terrible Documentation!!! :D
+
+#### User Data  
+This option allows you to use logins and cookies so on and so forth.  
+This is useful for websites that require logging in or recognizing you in some way.  
+If you need to login or perform an action simply make sure that **Headless** is **Uncheckedand**, **User Data** is **Checked**, and give yourself a wait time long enough to login or perform whatever task you need (Captcha ... Etc).  
+selenium will create a folder with your user data in it what you can later delete if you would like. however the user data contained within that folder will only be used if you have the **User Data** checkbox **Checked**.  
+
+#### Duplicate Link Rejection  
+The current implementation only checks the current link with the previous link and rejects the current link if they are the same. It is designed to spit out links as fast as possible. There are certainly ways that this could be improved, however it would most likely impact performance. By giving you the ability to Output the links to a file I am leaving it to your discretion whether you want to run sort or De-dupe commands over that file.
 
 #### Disclaimer/License  
 You do you. This comes with no license no guarantee and will likely 

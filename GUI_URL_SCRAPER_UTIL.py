@@ -1,15 +1,16 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import PySimpleGUI as sg
-import re
+import re,time
 ######################################## GUI setup
 sg.ChangeLookAndFeel('Black') # ez black
 layout=[[sg.Text('Input File Path or Url')],
-        [sg.Text("File:                   "),sg.Input("",key="_FILE_"), sg.FileBrowse()],
-        [sg.Text("URL:                  "),sg.Input("",key="_URL_")],
-        [sg.Text("Add regex:          "),sg.Input("",key="_RX_")],
-        [sg.Text("Output FileName:"),sg.Input("",key="_OUTputFILE_")],
-        [sg.OK("OK"), sg.Cancel()] ]
+        [sg.Text("File:                    "),sg.Input("",key="_FILE_"), sg.FileBrowse()],
+        [sg.Text("URL:                   "),sg.Input("",key="_URL_")],
+        [sg.Text("Add regex:           "),sg.Input("",key="_RX_")],
+        [sg.Text("Output File Name:"),sg.Input("",key="_OUTputFILE_")],
+        [sg.Checkbox("Headless",key="_HEAD_"),sg.Text("Wait in secs: "),sg.Input("0",key="_WAIT_",size=[5,1])],
+        [sg.OK("OK"), sg.Cancel(),sg.Text(" "*60),sg.Text("All fields are optional.")] ]
 
 window = sg.Window('Scraper Setup').Layout(layout)
 event, values = sg.Window.Read(window)
@@ -19,9 +20,19 @@ file_url=values["_FILE_"]
 url_url=values["_URL_"]
 regex=values["_RX_"]
 outPUTfile=values["_OUTputFILE_"]
+head=values["_HEAD_"]
 furl="file://"
 previous_link = ""
 current_link=""
+######################################### wait setup
+
+wait_time=values["_WAIT_"]
+try:
+    wait_time=int(wait_time)
+except Exception as e:
+    print(e)
+    wait_time=0
+
 ######################################### file or url
 if file_url=="":
     url_proper=url_url
@@ -42,7 +53,10 @@ def PRINT_AND_LOG():
 try:
     # options for webdriver
     options = Options()
-    options.add_argument("--headless")
+    if head==False:
+        pass
+    else:
+        options.add_argument("--headless")
     options.add_argument("--window-size=192x108")
     #options.add_argument("user-data-dir=selenium")
     # driver setup
@@ -51,6 +65,9 @@ try:
     print("Loading...")
     # main get URL
     driver.get(url_proper)
+
+    time.sleep(wait_time)
+
     # main scrape for links
     for meta in driver.find_elements_by_xpath("//a[@href]"):
         current_link=meta.get_attribute("href")
@@ -68,3 +85,4 @@ try:
     driver.close()
 except Exception as e:
     print(e)
+    driver.close()

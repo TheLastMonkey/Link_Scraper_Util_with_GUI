@@ -43,7 +43,7 @@ Depending on the website you may be able to load multiple pages or follow links 
 This option allows you to use logins and cookies so on and so forth.  
 This is useful for websites that require logging in or recognizing you in some way.  
 If you need to login or perform an action simply make sure that **Headless** is **Uncheckedand**, **User Data** is **Checked**, and give yourself a wait time long enough to login or perform whatever task you need (Captcha ... Etc).  
-selenium will create a folder with your user data in it what you can later delete if you would like. however the user data contained within that folder will only be used if you have the **User Data** checkbox **Checked**.  
+Selenium will create a folder with your user data in it, which you can later Use/Delete if you would like. However the user data contained within that folder will only be used if you have the **User Data** checkbox **Checked**.  
 
 #### Duplicate Link Rejection  
 The current implementation only checks the current link with the previous link and rejects the current link if they are the same. It is designed to spit out links as fast as possible. There are certainly ways that this could be improved, however it would most likely impact performance. By giving you the ability to Output the links to a file I am leaving it to your discretion whether you want to run sort or De-dupe commands over that file.

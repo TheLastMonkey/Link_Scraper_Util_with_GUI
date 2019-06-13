@@ -26,12 +26,18 @@ also optionally modified the script to Output the output file to a different fol
 There are Selenium tutorials you'll be all right.
 
 #### Options/Features  
-Headless Enabled by Default  
+Headless Enabled by Default - "Just do the thing."  
 User Data Cookies Logins Etc Disabled by Default  
 Accept Input as a Local HTML File or a URL  
 Add Regex if Desired
 Add Output File if Desired  
-"Some" Duplicate URL Rejection  
+"Some" Duplicate URL Rejection - Needs Improvement - but that would reduce performance.  
+  
+Add Wait Time - useful for giving you time to scroll to capture non loaded content. 
+  
+#### Wait Time Bonus!  
+On certain web pages as long as you keep loading and more elements the wait MAY automatically extend.  
+Depending on the website you may be able to load multiple pages or follow links to new pages and continue to collect links.  
 Terrible Documentation!!! :D
 
 #### Disclaimer/License  

@@ -9,7 +9,7 @@ layout=[[sg.Text('Input File Path or Url')],
         [sg.Text("URL:                   "),sg.Input("",key="_URL_")],
         [sg.Text("Add regex:           "),sg.Input("",key="_RX_")],
         [sg.Text("Output File Name:"),sg.Input("",key="_OUTputFILE_")],
-        [sg.Checkbox("Headless",key="_HEAD_"),sg.Text("Wait in secs: "),sg.Input("0",key="_WAIT_",size=[5,1])],
+        [sg.Checkbox("Headless",key="_HEAD_",default=True),sg.Text("Wait in secs: "),sg.Input("0",key="_WAIT_",size=[5,1])],
         [sg.OK("OK"), sg.Cancel(),sg.Text(" "*60),sg.Text("All fields are optional.")] ]
 
 window = sg.Window('Scraper Setup').Layout(layout)
